@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>MEGAMANIA-like — Shmup Espacial 8-bit</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="cabinet">
+  <div id="hud-top">
+    <div class="hud-left">SCORE <span id="score">000000</span></div>
+    <div class="hud-center">HI <span id="hi">000000</span></div>
+    <div class="hud-right">FASE <span id="level">1</span> ♥<span id="lives">3</span></div>
+  </div>
+
+  <div id="stage-wrap">
+    <canvas id="game" width="240" height="320"></canvas>
+
+    <div id="overlay-title" class="overlay">
+      <h1>MEGA<br>MANIA<span class="blink">-like</span></h1>
+      <p class="sub">HAMBÚRGUERES DO ESPAÇO</p>
+      <div class="help">
+        <p>◀ ▶ / A D — mover</p>
+        <p>ESPAÇO — atirar (segurar)</p>
+        <p>📱 arraste p/ mover + tiro auto</p>
+      </div>
+      <button id="btn-start">▶ INICIAR</button>
+      <p class="tiny">Destrua a onda p/ recarregar energia.<br>Energia zero = perde 1 vida.</p>
+    </div>
+
+    <div id="overlay-msg" class="overlay hidden">
+      <h2 id="msg-title">FASE 2</h2>
+      <p id="msg-sub">BOLACHAS!</p>
+    </div>
+
+    <div id="overlay-over" class="overlay hidden">
+      <h1>GAME OVER</h1>
+      <p>SCORE <span id="final-score">0</span></p>
+      <p class="tiny">Toque ou ENTER p/ jogar de novo</p>
+      <button id="btn-restart">↻ JOGAR DE NOVO</button>
+    </div>
+  </div>
+
+  <div id="hud-bottom">
+    <div id="fuel-label">ENERGIA</div>
+    <div id="fuel-bar"><div id="fuel-fill"></div><div id="fuel-low"></div></div>
+  </div>
+
+  <div id="touch-controls">
+    <button id="t-left">◀</button>
+    <button id="t-fire">●</button>
+    <button id="t-right">▶</button>
+  </div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
